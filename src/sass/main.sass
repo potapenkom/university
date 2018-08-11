@@ -1,7 +1,7 @@
 @import 'fonts.sass'
   
 .container
-    width: 1000px
+    max-width: 1000px
     margin: 0 auto
     padding: 0 5px
        
@@ -97,7 +97,6 @@
 .about__info     
     padding: 25px 0 0 0  
     
-
 .about__text1
     padding-bottom: 30px 
     line-height: 1.538
@@ -110,7 +109,6 @@
     font-family: Helvetica
     font-size: 13px
     color: #333333
-
 
 .section__input
     max-width: 360px
@@ -270,8 +268,8 @@ input[type=file]
 
 .reviews
     padding: 40px 0 0 0
+    min-height: 247px
    
-
 .review__title
     display: flex
     justify-content: space-between
@@ -288,18 +286,18 @@ input[type=file]
 
 .review__button
      display: inline-block
-    
-    
+     
 .review__prev, .review__next
     display: inline-block
-    position: relative 
-    box-sizing: border-box
     padding: 19px 19px 
     margin-left: 5px
     border: 1px solid #e6e6e6
     background-repeat: no-repeat
     background-position: 50% 50%
     border-radius: 50%
+    cursor: pointer
+    transition: 0.6s ease
+    
     
     &:before
         content: ""
@@ -323,15 +321,27 @@ input[type=file]
 
 .slider
     max-width: 1000px
+    position: relative
+    margin: auto
 
 .review__slide
-    display: flex
-    justify-content: space-between
-    position: relative
+    min-height: 100%
 
+.slide__js    
+    animation-name: slide
+    animation-duration: 2s
+
+@keyframes slide
+	opacity: .4
+
+to 
+	opacity: 1
+   
+    
 .reviews__wrap
     max-width: 725px
-
+    z-index: 100
+   
 .review__quotes__first, .review__quotes__last
     font-size: 50px
     font-weight: bold
@@ -342,7 +352,6 @@ input[type=file]
 .review__quotes__last
     text-align: right   
 
-       
 .reviews__text
     padding: 0 0 12px 0
     font-size: 13px
@@ -350,7 +359,6 @@ input[type=file]
     color: #333333
     line-height: 1.538
     text-align: left
-    overflow: hidden
 
 .review__name
     padding: 0 0 19px 0
@@ -362,13 +370,16 @@ input[type=file]
     text-align: right
 
 .reviews__photo
-    position: absolute
-    top: 0
-    right: 0
+    float: right
+    position: relative
+    bottom: 166px
+    
     img 
-       
-        z-index: 100
-
+        display: block
+        height: 100%
+        width: 100%
+        z-index: 100    
+    
 .reviews__footer
     padding: 68px 0 62px 0
     
