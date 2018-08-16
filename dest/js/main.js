@@ -20,7 +20,9 @@ function showSlides(n) {
         slideIndex = slides.length
     }
     for (i = 0; i < slides.length; i++) {
-         slides[i].style.display = "none"; 
+         slides[i].style.visibility = "hidden"; 
+         slides[i].style.opasity = "0";
     }
-    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-1].style.visibility = "visible";
+    slides[slideIndex-1].style.opasity = "1";
 }
