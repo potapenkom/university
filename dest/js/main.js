@@ -21,8 +21,8 @@ function showSlides(n) {
     }
     for (i = 0; i < slides.length; i++) {
          slides[i].style.visibility = "hidden"; 
-         slides[i].style.opasity = "0";
+         slides[i].style.opacity = "0";
     }
     slides[slideIndex-1].style.visibility = "visible";
-    slides[slideIndex-1].style.opasity = "1";
+    slides[slideIndex-1].style.opacity = "1";
 }
