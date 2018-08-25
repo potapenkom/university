@@ -20,6 +20,7 @@ p
 h3
     font-size: 25px
     font-family: Helvetica
+    letter-spacing: .2px
     color: #3498db
     text-transform: uppercase 
     @media screen and (max-width: 930px)  
@@ -31,38 +32,42 @@ h3
     width: 100%
     max-width: 1000px
     margin: 0 auto
-    padding: 0 5px 0 5px
+    padding: 0px 6px 0 0px
     box-sizing: border-box
     @media screen and (max-width: 930px)
         max-width: 760px 
+        padding: 0 0px 0 5px
         box-sizing: border-box    
     @media screen and (max-width: 799px)
-        max-width: 320px     
+        max-width: 320px
+        padding: 0     
 
 .header__wrap
     width: 100%
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 10px 0 8px 0
+    padding: 12px 0 10px 0
+    @media screen and (max-width: 930px)
+        padding: 12px 0 13px
     @media screen and (max-width: 799px)
         flex-direction: column
-        padding: 17px 0 20px 0
+        padding: 15px 0 18px 0
   
-.logo
+.header__logo
     display: flex
     align-items: center 
     @media screen and (max-width: 799px)
         flex-direction: column
         border-bottom: 1px solid #2980b9
-        padding: 0 0 12px 0
+        padding: 0 0 2px 0
 
-    a                 
-        height: 0  
-        padding: 27.5px
-        background-size: cover
-        background-repeat: no-repeat 
-        text-decoration: none 
+.header__img                 
+    height: 0  
+    padding: 27.5px
+    background-size: cover
+    background-repeat: no-repeat 
+    text-decoration: none 
       
 .logo__text
     display: inline-block
@@ -73,7 +78,7 @@ h3
     color: #ffffff  
     @media screen and (max-width: 799px)
         font-size: 20px
-        padding: 10px 0 0 0 
+        padding: 8px 0 6px 0 
 
 .header__nav
     display: flex
@@ -87,23 +92,28 @@ h3
     font-size: 13px
     padding: 0 1.5px
     color: #ffffff
+    @media screen and (max-width: 930px)
+        margin-right: -10px
     @media screen and (max-width: 799px)
         padding: 0 11px 0 0
-
+        
 .nav
     display: flex
     flex-direction: row
-    
-    a   
-        display: inline-block        
-        height: 0
-        padding: 12px 12px
-        margin: 0 0 0 6px
-        background-size: cover
-        background-repeat: no-repeat 
-        text-decoration: none
-        @media screen and (max-width: 799px) 
-            margin: 0 0 0 8px 
+    @media screen and (max-width: 930px)
+        margin-right: -3px
+ 
+.header__item
+    display: inline-block        
+    height: 0
+    padding: 12px 12px
+    margin: 0 0 0 8px
+    background-size: cover
+    background-repeat: no-repeat 
+    text-decoration: none
+    @media screen and (max-width: 799px) 
+        margin: 0 0 0 8px 
+         padding: 10px 10px
  
 .welcome
     background-size: cover
@@ -113,11 +123,10 @@ h3
     position: relative
     padding: 75px 0 103px 0
     @media screen and (max-width: 930px)
-        max-height: 351px 
-        padding: 82px 0 91px
+        padding: 87px 0 101px
         box-sizing: border-box
     @media screen and (max-width: 799px) 
-        padding: 39px 0 165px 0
+        padding: 34px 0 165px 0
            
 .welcome__title
     max-width: 553px
@@ -146,21 +155,23 @@ h3
         font-family: Helvetica
         font-size: 30px
         line-height: 1.333
+        letter-spacing: .15px
         color: #ffffff 
         padding: 14px 0 0 0
         @media screen and (max-width: 930px)
             font-size: 25px
             line-height: 1.44
-            padding: 25px 0 0 0
+            padding: 13px 0 0 0
         @media screen and (max-width: 799px)        
             font-size: 16px
             line-height: 1.75
             text-align: center
+            padding: 12px 0 0 0
 
 .section__input
     position: absolute
-    right: 0
-    top: 35px
+    right: 3px
+    top: 30px
     max-width: 360px
     padding: 30px 20px 
     box-sizing: border-box
@@ -168,34 +179,38 @@ h3
     background-color: #ffff  
     box-shadow: inset 0px -5px 0px 0px #3498db
     @media screen and (max-width: 930px)
+        right: 0
         max-width: 340px
-        padding: 35px 20px 30px 20px
+        padding: 34px 20px 30px 20px
         position: absolute
     @media screen and (max-width: 799px)
         max-width: 300px  
-        right: 2.5px 
-        padding: 35px 10px 30px 10px 
-        top: 206px
-        margin: 0 auto
+        right: 0
+        padding: 35px 17px 28px  
+        top: 197px
 .form
     width: 100%
     @media screen and (max-width: 930px)
         max-width: 300px
    
 .form__legent
-    padding: 0 0 28px 0
+    padding: 0 0 29px 0
     text-align: center
     font-family: Helvetica 
     font-size: 25px
     line-height: 0.8
     text-transform: uppercase
     color: #333333
+    @media screen and (max-width: 930px)
+        font-size: 20px     
     @media screen and (max-width: 799px)
-         padding: 0 0 24px 0
+         padding: 0 0 26px 0
 
 .form__field
     margin-bottom: 10px
-    
+    @media screen and (max-width: 799px)
+        margin-bottom: 11px
+
 .input,.textarea,.select,.option,.zip 
     width: 100%
     height: 35px
@@ -206,15 +221,20 @@ h3
     font-size: 15px
     color: #333333
     box-sizing: border-box
+    @media screen and (max-width: 799px)
+        padding-left: 24px
 
 .select
     background-repeat: no-repeat
     background-position: 97% 50%
     background-size: 13px
     appearance: none
+    @media screen and (max-width: 799px)
+        background-position: 96% 50%
 
 .textarea
-    height: 78px
+    height: 74px
+    padding: 12px 0 0 15px 
     resize: none 
     @media screen and (max-width: 799px)
         height: 76px
@@ -235,12 +255,10 @@ input[type=file]
          visibility: hidden
 
 .form__submit
-    padding: 15px 65px 0 55px
+    padding: 15px 65px 7px 55px
     @media screen and (max-width: 799px)
         margin: 0 auto
-        padding: 15px 30px
-    @media screen and (max-width: 799px)
-        padding: 26px 30px 0
+        padding: 7px 38px
 
 .button
     padding: 11px 71.1px
@@ -249,17 +267,20 @@ input[type=file]
     font-size: 25px
     color: #ffffff    
     text-decoration: none 
+    @media screen and (max-width: 930px)
+        padding: 16px 70px 14px
+        font-size: 20px
     @media screen and (max-width: 799px)
         text-align: center
              
 .about__wrap
-    padding: 35px 0 70px 0
+    padding: 33px 0 60px 0
     box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.05)
     z-index: 1
     @media screen and (max-width: 930px)
-        padding: 28px 0 35px
+        padding: 28px 0 0px
     @media screen and (max-width: 799px)
-        padding: 415px 0 35px
+        padding: 420px 0 35px
         margin: 0 auto
 
 .about__univer
@@ -267,35 +288,38 @@ input[type=file]
         padding: 15px 0 0
                    
 .about__info     
-    padding: 25px 0 0 0
+    padding: 17px 0 0 0
     @media screen and (max-width: 930px)
-        max-width: 380px
-        padding: 15px 0 0
+        padding: 16px 0px 39px 0px
+        max-width: 400px
     @media screen and (max-width: 799px)
         max-width: 272px
         margin: 0 auto
-        padding: 25px 0 0 0
+        padding: 18px 0 0 0
         
 .about__text1
-    padding-bottom: 25px 
+    padding-bottom: 30px 
     max-width: 563px
-    
+    @media screen and (max-width: 799px)
+        padding-bottom: 24px
+
 .about__text2
     max-width: 567px
 
 .benefits__block
-    padding: 40px 0 33px 0
+    padding: 33px 0 30px 0
     border-bottom: 1px solid ​#e6e6e6
     @media screen and (max-width: 800px)
         padding: 40px 0 20px 0
     @media screen and (max-width: 799px)
-        padding: 33px 0 45px 0  
+        padding: 33px 0 48px 0  
                     
 .benefits__wrap
     display: flex
     justify-content: space-between
-    padding: 33px 0 0 0
+    padding: 28px 0 0 0
     @media screen and (max-width: 930px)
+        padding: 31px 0 0
         flex-direction: column
     @media screen and (max-width: 799px)
         padding: 0     
@@ -304,13 +328,14 @@ input[type=file]
     max-width: 290px
     @media screen and (max-width: 930px) 
         display: flex
-        justify-content: space-between
+        justify-content: flex-start
         max-width: 760px
-        padding: 0 0 33px 0
+        padding: 0 0 26px 0
     @media screen and (max-width: 799px)
         flex-direction: column
         align-items: center
-        padding: 33px 0 0 0
+        padding: 29px 0 0 0
+        max-width: 270px
          
 .benefit__img
     display: block
@@ -319,15 +344,15 @@ input[type=file]
     background-size: cover
     background-repeat: no-repeat 
     text-decoration: none 
-    
+     
 .benefit__texts
     @media screen and (max-width: 930px) 
         padding: 0 0 0 20px
     @media screen and (max-width: 799px)
-        padding: 27px 0 0 0     
+        padding: 25px 0 0 0     
 
 .benefit__title     
-    padding: 27px 0 27px 0
+    padding: 27px 0 0 0
     text-align: center
     @media screen and (max-width: 930px)
         text-align: left
@@ -337,13 +362,16 @@ input[type=file]
       
 .benefit__text      
     text-align: center
-    padding: 0 0 26px 0
+    padding: 16px 0 27px 0
+    max-width: 280px
     @media screen and (max-width: 930px) 
-        padding: 25px 0 20px
+        padding: 17px 0 19px
         text-align: left
+        max-width: 550px
     @media screen and (max-width: 799px)
         text-align: center   
-        padding: 25px 0      
+        padding: 17px 0 
+        min-width: 239px     
 
 .benefit__button 
     display: flex
@@ -387,19 +415,19 @@ input[type=file]
     color: #333333          
 
 .reviews
-    padding: 40px 0 0 0
+    padding: 15px 0 0 0
     min-height: 242px
     @media screen and (max-width: 930px)
-        padding: 45px 0 0 0
-        min-height: 232px
+        min-height: 225px
+        padding: 31px 0 0 0
     @media screen and (max-width: 799px)
-        padding: 45px 0 251px 0     
+        padding: 35px 0 245px 0     
     
 .review__title
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 0 0 25px 0
+    padding: 13px 0 13px 0
     @media screen and (max-width: 930px)
         padding: 0 0 20px 0
     @media screen and (max-width: 799px)
@@ -410,14 +438,15 @@ input[type=file]
         @media screen and (max-width: 799px)
             text-align: center
             line-height: 1.5
+            max-width: 250px
                     
 .review__buttons
     @media screen and (max-width: 799px)
-        padding: 20px 0 22px
+        padding: 15px 0 25px
 
 .review__button
      display: inline-block
-          
+        
 .review__prev, .review__next
     display: inline-block
     padding: 19px 19px 
@@ -430,7 +459,7 @@ input[type=file]
     transition: 0.6s ease
     @media screen and (max-width: 930px)
         padding: 16.5px
-    
+
     &:before
         content: ""
         position: absolute
@@ -479,31 +508,52 @@ input[type=file]
     font-weight: bold
     font-family: Helvetica
     color: #f2f2f2
+    @media screen and (max-width: 930px)
+        margin: -3px
 
 .review__quotes__last
-    text-align: right   
+    text-align: right 
+    @media screen and (max-width: 930px)
+        padding: 15px 17px 0 0px  
+    @media screen and (max-width: 799px)
+        padding: 9px 12px 0 0
+
+.reviews__texts
+    @media screen and (max-width: 799px)
+        margin: 0 auto
+        padding: 0 0 0 16px
 
 .reviews__text
     padding: 0 0 12px 0
     text-align: left
+    @media screen and (max-width: 799px)
+        max-width: 270px 
+        padding: 0 0 21px 0
 
 .review__name
-    padding: 0 0 19px 0
+    padding: 6px 4px 19px 0
     font-size: 13px
     font-family: Helvetica
     color: #333333
     font-weight: bold
     text-transform: uppercase
     text-align: right
+    @media screen and (max-width: 930px)
+        padding: 0 24px 0 0
+    @media screen and (max-width: 799px)
+        padding: 0 9px 0 0
 
 .reviews__photo
     position: absolute
     right: 0
-    top: 0
+    top: 1px
     @media screen and (max-width: 799px)
         right: 52px
         top: 220px
-        
+    @media screen and (max-width: 799px)
+        right: 33px
+        top: 208px
+ 
     img 
         height: 100%
         width: 100%
@@ -512,17 +562,17 @@ input[type=file]
         z-index: 0     
     
 .reviews__footer
-    padding: 68px 0 62px 0
+    padding: 68px 0 64px 0
     @media screen and (max-width: 799px)
-        padding: 97px 0 144px
+        padding: 97px 0 143px
         position: relative 
            
 .reviews__button
     display: flex
     justify-content: space-around
     align-items: center
-    max-width: 540px   
-    padding: 9px 25px 9px 30px
+    max-width: 527px   
+    padding: 9px 0px 9px 14px
     font-size: 25px
     font-family: "Helvetica"
     text-transform: uppercase
@@ -531,12 +581,14 @@ input[type=file]
     text-align: left
     text-decoration: none
     @media screen and (max-width: 930px)
-        max-width: 475px
+        max-width: 465px
+        font-size: 20px
+        padding: 11px 0 15px 0px
     @media screen and (max-width: 799px)
         position: absolute
         left: 0
-        top: 65px
-        padding: 15px 40px 15px 51px
+        top: 59px
+        padding: 12px 40px 13px 51px
         font-size: 20px
         line-height: 1.6
         flex-direction: column
@@ -552,51 +604,80 @@ input[type=file]
     display: flex
     justify-content: center
     align-items: center
+    margin: 0 0px 0 -25px
     height: 30px
     width: 30px
     border: 2px solid #ffffff
     border-radius: 50%
-  
+    @media screen and (max-width: 799px)
+        margin: 8px 0 0 7px
+
 .footer
-    padding: 40px 0 60px 0  
+    padding: 47px 0 72px 0  
     @media screen and (max-width: 930px) 
         padding: 50px 0 75px 
     @media screen and (max-width: 799px) 
-         padding: 32px 0 70px
-    
+         padding: 31px 0 36px
+
 .footer .header__wrap
-     @media screen and (max-width: 930px)
-         padding: 0
+    padding: 0
+    @media screen and (max-width: 930px)
+        padding: 0
+    @media screen and (max-width: 799px) 
+        padding: 0
+
+.footer .header__logo
      @media screen and (max-width: 799px) 
          padding: 0
 
-.footer .logo
-     @media screen and (max-width: 799px) 
-         padding: 0
+.footer .header__img
+    padding: 33.5px
+    @media screen and (max-width: 799px) 
+        padding: 27.5px
+
+.footer .header__menu
+    padding: 0 102px 0 0
+    @media screen and (max-width: 930px)
+        padding: 0px 33px 0 0
+    @media screen and (max-width: 799px) 
+        padding: 11px 14px 0 0
+
+.footer .header__item
+    padding: 10px    
 
 .footer .logo__text
-     @media screen and (max-width: 799px) 
-         padding: 10px 0 10px 0    
+    max-width: 160px
+    padding: 0 0 0 10px
+    @media screen and (max-width: 930px)
+        padding: 0px 0 4px 8px
+    @media screen and (max-width: 799px) 
+        padding: 9px 0 6px 0  
+        max-width: 200px  
 
 .footer .header__nav
-     @media screen and (max-width: 799px) 
-         justify-content: center
+    padding: 0.8px 0 7px 0
+    @media screen and (max-width: 930px)
+        padding: 0px 0 4px
+    @media screen and (max-width: 799px) 
+        justify-content: center
 
 .footer .connect
-     @media screen and (max-width: 799px)
+    @media screen and (max-width: 930px)
+        margin-right: -4px   
+    @media screen and (max-width: 799px)
         padding: 0 
 
-.header__text
+.footer__text
     font-family: "Helvetica"
     font-size: 13px
     color: #ffffff
     line-height: 1.538
     @media screen and (max-width: 930px)
         max-width: 445px
-        padding: 10px 0 0 0
+        padding: 5px 0 0 0
         line-height: 1.365
     @media screen and (max-width: 799px)
-        padding: 43px 0 0 0
+        padding: 37px 0 0 0
         max-width: 240px
         text-align: center    
 

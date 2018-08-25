@@ -9,28 +9,28 @@ var plugins = [
 	autoprefixer({browsers: ['last 2 version']}),
 	cssnano()
 ]
-
+gulp.task('server', function() {
+    browserSync.init({
+        server: {
+            baseDir: "dest/"
+        },
+        files: ['dest/**/*.html','dest/*.css','dest/*.js','build/img/*.*']
+    });
+});
 
 gulp.task('sass', function () {
 	return gulp.src('src/sass/**/*.sass')
         .pipe(sass())
     	.pipe(postcss(plugins))
-		.pipe(gulp.dest('dest/css')); 
+        .pipe(gulp.dest('dest/css'))
+        .pipe(browserSync.stream()); 
 });
 
-gulp.task('browser-sync', function() { 
-    browserSync({ 
-        server: { 
-            baseDir: 'dest' 
-        },
-        notify: false 
-    });
-});
-
-gulp.task('watch', ['browser-sync', 'sass'], function() {
+gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.sass', ['sass']); 
     
 });
+
 
 
 
